@@ -9,7 +9,8 @@ RUN DEBIAN_FRONTEND='noninteractive' apt update \
 	&& DEBIAN_FRONTEND='noninteractive' apt autoremove -y \
 	&& DEBIAN_FRONTEND='noninteractive' apt clean -y \
 	&& DEBIAN_FRONTEND='noninteractive' apt install man-db metasploit-framework exploitdb \
-	dirb wordlists netcat iputils-ping vim netcat python2 wpscan -y --fix-missing
+	dirb wordlists netcat-traditional iputils-ping vim python2 wpscan \
+	gobuster -y --fix-missing
 
 WORKDIR /
 
